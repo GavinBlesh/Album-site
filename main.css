@@ -4,3 +4,13 @@ html, body {
     height: 100%;
 }
 
+.button {
+    background-color: #8B0000;
+    border: white; 
+    color: #8B0000;
+    padding: 150px 320px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
