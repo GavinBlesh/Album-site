@@ -1,2 +1,2 @@
 # Album-site
-W.I.P - Fill in when completed
+Website that helps users discover new music by generating them a random album for them to listen to.
