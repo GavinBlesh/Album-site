@@ -1,2 +1,4 @@
-# Album-site
-A work in progress website that helps users discover new music by generating them a random album for them to listen to.
+# Groover
+Groover is a React-based web application that integrates the Discogs API to generate users a random music album to listen to. 
+
+Additionally, Groover contains my own personal recommendations for users
