@@ -7,18 +7,27 @@
 
 </head>
 <body>
-    <div id="root"></div>
+    <div id="heading-root"></div>
+    <div id="button-root"></div>
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
     <script>
         const e = React.createElement;
 
-        function App(){
+        function Heading(){
             return e('h1', { className: 'center-top' }, 'Groover');
+        }        
+
+        function Button(){
+            return e('button', {className: 'button', onClick: () => alert("Get Groovy")}, 'Get Groovy');
         }
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(e(App));
+
+        const headingRoot = ReactDOM.createRoot(document.getElementById('heading-root'));
+        headingRoot.render(e(Heading));
+
+        const buttonRoot = ReactDOM.createRoot(document.getElementById('button-root'));
+        buttonRoot.render(e(Button));
     </script>
 </body>
 </html>

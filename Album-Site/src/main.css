@@ -1,8 +1,35 @@
 :root {
-  background-color:#242424;
+  background-color: #FFFAEF;
+  --font-family-base: 'Helvetica', sans-serif;
+  
+}
+
+.button {
+    background-color: #8B0000;
+    border: #FFFAEF; 
+    color: #FFFAEF;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 445px;
+    left: 46%;
+    border-radius: 13px;
+    font-family: 'Helvectica', sans-serif;
 }
 
 .center-top {
   text-align: center;
   margin-top: 20px;
 }
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 50px;
+  color: #8B0000;
+}
+
