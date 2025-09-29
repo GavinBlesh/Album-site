@@ -33,3 +33,12 @@ h1 {
   color: #8B0000;
 }
 
+.line {
+  border-left: 1px solid #8B0000;
+  height: 700px;
+  position: absolute;
+  left: 20%;
+  margin-left: -3px;
+  top: 0;
+}
+
