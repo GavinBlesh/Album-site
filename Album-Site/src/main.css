@@ -14,7 +14,7 @@
     display: block;
     font-size: 20px;
     position: absolute;
-    top: 445px;
+    top: 400px;
     left: 45.5%;
     border-radius: 13px;
     font-family: 'Helvectica', sans-serif;
@@ -22,25 +22,17 @@
 
 .center-top {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 h1 {
   text-align: center;
+  position: relative;
   margin-top: 10px;
   font-family: 'Helvetica', sans-serif;
   font-size: 50px;
   color: #8B0000;
   text-align: center;
   margin-top: 20px;
-}
-
-.line {
-  border-left: 1px solid #8B0000;
-  height: 100vh;
-  position: absolute;
-  left: 20%;
-  margin-left: -3px;
-  top: 0;
 }
 
