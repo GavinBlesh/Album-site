@@ -15,7 +15,7 @@
     font-size: 20px;
     position: absolute;
     top: 550px;
-    left: 45.5%;
+    left: 45%;
     border-radius: 13px;
     font-family: 'Helvectica', sans-serif;
 }
@@ -27,7 +27,6 @@
   font-family: 'Helvetica', sans-serif;
   font-size: 50px;
   color: #8B0000;
-  text-align: center;
 }
 
 .h2 {

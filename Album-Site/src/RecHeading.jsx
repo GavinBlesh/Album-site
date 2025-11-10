@@ -3,7 +3,7 @@ export default
 function Heading(){
     return (
         <h2 className='h2'>
-            Creator's Pick
+            Gavin's Pick
 
         </h2>
     );
