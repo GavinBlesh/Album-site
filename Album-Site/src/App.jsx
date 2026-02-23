@@ -3,6 +3,7 @@ import Heading from './Heading'
 import Button from './Button'
 import Line from './Line'
 import RecHeading from './RecHeading'
+import CallApi from './CallApi'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Button />
       <Line />
       <RecHeading />
+      <CallApi />
     </div>
   )
 }
