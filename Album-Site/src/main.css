@@ -10,7 +10,28 @@
   text-align: center;
   position: relative;
   font-family: 'Helvetica', sans-serif;
-  top: 95px;
+  top: 85px;
+}
+
+.album-cover {
+  position: relative;
+  top:95px;
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 20pt;
+  position: center;
+  margin-left: 500px;
+  
+}
+
+.artist {
+  color:#8B0000;
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+  font-family: 'Helvetica', sans-serif;
+  top: 80px;
 }
 
 .button {
@@ -55,12 +76,4 @@
   left: 20%;
   margin-left: -3px;
   top: 0;
-}
-
-.album-cover {
-  width: 250px;
-  height: 250px;
-  display: block;
-  margin: 20pt;
-  
 }

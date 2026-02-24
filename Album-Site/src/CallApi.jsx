@@ -3,10 +3,11 @@
 
 import { useState, useEffect } from 'react';
 
-export default function CallApi() {
+export default function CallApi({ trigger, onAlbumFound, onRetry }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    setData(null);
     const id = (Math.floor(Math.random() *10000000) + 1);
     const token = import.meta.env.VITE_DISCOGS_KEY;
 
@@ -17,13 +18,24 @@ export default function CallApi() {
       }
     })
       .then(response => response.json())
-      .then(json => setData(json))
-      .catch(error => console.error(error));
-  }, []);
+      .then(json => {
+        setData(json);
+        const artist = json.artists && json.artists.length > 0 ? json.artists[0].name : null;
+        if (json.title && json.images && json.images.length > 0 && artist) {
+          onAlbumFound(json.title, json.images[0].resource_url, artist);
+        } else {
+          onRetry();
+        }
+  })
+      .catch(error => {
+        console.error(error);
+        onAlbumFound(null, null, null);
+      })
+  }, [trigger, onAlbumFound, onRetry]);
 
   return (
     <div>
-      {data ? <div className='callapi'>{data.title}</div> : 'Loading...'}
+      {data && data.title ? <div className='callapi'>{data.title}</div> : 'Loading...'}
     </div>
   );
 }
