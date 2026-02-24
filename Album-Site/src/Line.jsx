@@ -2,7 +2,7 @@ export default
 
 function Line(){
     return (
-        <line className='line'>
-        </line>
+        <div className='line'>
+        </div>
     )
 }

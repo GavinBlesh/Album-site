@@ -4,6 +4,7 @@ import Button from './Button'
 import Line from './Line'
 import RecHeading from './RecHeading'
 import CallApi from './CallApi'
+import GetAlbumCover from './GetAlbumCover'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Line />
       <RecHeading />
       <CallApi />
+      <GetAlbumCover />
     </div>
   )
 }

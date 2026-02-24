@@ -23,7 +23,7 @@ export default function CallApi() {
 
   return (
     <div>
-      {data ? <callapi className='callapi'>{data.title}</callapi> : 'Loading...'}
+      {data ? <div className='callapi'>{data.title}</div> : 'Loading...'}
     </div>
   );
 }
