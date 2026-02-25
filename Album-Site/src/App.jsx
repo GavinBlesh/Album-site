@@ -7,6 +7,7 @@ import CallApi from './CallApi'
 import GetAlbumCover from './GetAlbumCover'
 import './App.css'
 import Artist from './Artist'
+import Tracklist from './Tracklist'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,6 +37,8 @@ function App() {
       <CallApi trigger={count} onAlbumFound={handleAlbumFound} onRetry={handleManualRoll}/>
       <GetAlbumCover coverUrl={albumCover} />
       <Artist name={artistName} />
+      <Tracklist />
+      
     </div>
   )
 }

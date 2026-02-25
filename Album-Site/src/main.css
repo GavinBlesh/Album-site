@@ -34,6 +34,14 @@
   top: 80px;
 }
 
+.tracklist {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  font-family: 'Helvetica', sans-serif;
+}
+
 .button {
     background-color: #8B0000;
     border: #FFFAEF; 
