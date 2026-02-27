@@ -21,8 +21,10 @@ export default function CallApi({ trigger, onAlbumFound, onRetry }) {
       .then(json => {
         setData(json);
         const artist = json.artists && json.artists.length > 0 ? json.artists[0].name : null;
+        const tracks = json.tracklist || [];
+        const year = json.year || "";
         if (json.title && json.images && json.images.length > 0 && artist) {
-          onAlbumFound(json.title, json.images[0].resource_url, artist);
+          onAlbumFound(json.title, json.images[0].resource_url, artist, tracks, year);
         } else {
           onRetry();
         }
@@ -35,7 +37,7 @@ export default function CallApi({ trigger, onAlbumFound, onRetry }) {
 
   return (
     <div>
-      {data && data.title ? <div className='callapi'>{data.title}</div> : 'Loading...'}
+      {data && data.title ? <div className='callapi'>{data.title} ({data.year})</div> : 'Loading...'}
     </div>
   );
 }

@@ -14,17 +14,23 @@ function App() {
   const [albumTitle, setAlbumTitle] = useState(null);
   const [albumCover, setAlbumCover] = useState(null);
   const [artistName, setArtistName] = useState(null);
+  const [tracklist, setTrackList] = useState(null);
+  const [albumYear, setAlbumYear] = useState(null);
 
-  const handleAlbumFound = useCallback((title, cover, artist) => {
+  const handleAlbumFound = useCallback((title, cover, artist, tracklist, year) => {
     setAlbumTitle(title);
     setAlbumCover(cover);
     setArtistName(artist);
+    setTrackList(tracklist);
+    setAlbumYear(year);
   }, []);
 
   const handleManualRoll = useCallback(() => {
     setAlbumTitle(null);
     setAlbumCover(null);
     setArtistName(null);
+    setTrackList([]);
+    setAlbumYear(null);
     setCount(prev => prev + 1);
   }, [])
 
@@ -37,7 +43,7 @@ function App() {
       <CallApi trigger={count} onAlbumFound={handleAlbumFound} onRetry={handleManualRoll}/>
       <GetAlbumCover coverUrl={albumCover} />
       <Artist name={artistName} />
-      <Tracklist />
+      <Tracklist name={tracklist}/>
       
     </div>
   )
