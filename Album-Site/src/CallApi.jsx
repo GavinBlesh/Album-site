@@ -23,15 +23,16 @@ export default function CallApi({ trigger, onAlbumFound, onRetry }) {
         const artist = json.artists && json.artists.length > 0 ? json.artists[0].name : null;
         const tracks = json.tracklist || [];
         const year = json.year || "";
+        const genre = json.genres || [];
         if (json.title && json.images && json.images.length > 0 && artist) {
-          onAlbumFound(json.title, json.images[0].resource_url, artist, tracks, year);
+          onAlbumFound(json.title, json.images[0].resource_url, artist, tracks, year, genre);
         } else {
           onRetry();
         }
   })
       .catch(error => {
         console.error(error);
-        onAlbumFound(null, null, null);
+        onAlbumFound(null, null, null, null, null, null);
       })
   }, [trigger, onAlbumFound, onRetry]);
 

@@ -6,7 +6,7 @@ export default function Tracklist({ name }){
         <div className='tracklist'>
             {name.map((track, index) => ( 
                 <div key={index} className='track'>
-                    {track.position} {track.title}
+                    {track.position}. {track.title}
                 </div>
             ))}
         </div>

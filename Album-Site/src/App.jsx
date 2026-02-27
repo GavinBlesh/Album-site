@@ -8,6 +8,7 @@ import GetAlbumCover from './GetAlbumCover'
 import './App.css'
 import Artist from './Artist'
 import Tracklist from './Tracklist'
+import Genre from './Genre'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,13 +17,15 @@ function App() {
   const [artistName, setArtistName] = useState(null);
   const [tracklist, setTrackList] = useState(null);
   const [albumYear, setAlbumYear] = useState(null);
+  const [genre, setGenre] = useState(null);
 
-  const handleAlbumFound = useCallback((title, cover, artist, tracklist, year) => {
+  const handleAlbumFound = useCallback((title, cover, artist, tracklist, year, genre) => {
     setAlbumTitle(title);
     setAlbumCover(cover);
     setArtistName(artist);
     setTrackList(tracklist);
     setAlbumYear(year);
+    setGenre(genre);
   }, []);
 
   const handleManualRoll = useCallback(() => {
@@ -31,6 +34,7 @@ function App() {
     setArtistName(null);
     setTrackList([]);
     setAlbumYear(null);
+    setGenre(null);
     setCount(prev => prev + 1);
   }, [])
 
@@ -44,7 +48,7 @@ function App() {
       <GetAlbumCover coverUrl={albumCover} />
       <Artist name={artistName} />
       <Tracklist name={tracklist}/>
-      
+      <Genre name={genre}/>
     </div>
   )
 }
